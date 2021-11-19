@@ -1,5 +1,5 @@
 ---
-title: "Making this Website"
+title: "Making this website"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorials
@@ -8,7 +8,7 @@ tags:
   - jekyll
 ---
 
-In need of a test blog post for this website, I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely "username.github.io". It seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is [here](https://github.com/emolter/emolter.github.io).
+I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely "username.github.io". Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is [here](https://github.com/emolter/emolter.github.io).
 
 # Software Prerequisites
 

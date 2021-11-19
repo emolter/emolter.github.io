@@ -62,7 +62,7 @@ author:
   links:
     - label: "email"
       icon: "fas fa-fw fa-envelope"
-      url: "emolter@berkeley.edu"
+      url: "mailto:emolter@berkeley.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emolter"
@@ -80,7 +80,7 @@ footer:
   links:
     - label: "email"
       icon: "fas fa-fw fa-envelope"
-      url: "emolter@berkeley.edu"
+      url: "mailto:emolter@berkeley.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emolter"
