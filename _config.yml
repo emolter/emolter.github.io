@@ -13,15 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Ned Molter
+email: emolter@berkeley.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  Edward M. Molter, Ned Molter, personal website, not sure where this goes
+twitter_username: 
+github_username: emolter
+minimal_mistakes_skin: contrast
 search: true
 
 # Build settings
@@ -58,34 +56,43 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Edward M. (Ned) Molter"
+  avatar : "/assets/images/bio-photo.png"
+  bio    : "Planetary scientist, climate change researcher, teacher, student, rock climber."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "email"
+      icon: "fab fa-fw fa-envelope"
+      url: "emolter@berkeley.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/emolter"
+    - label: "ADS"
+      icon: "fab fa-fw fa-globe-asia"
+      url: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+    - label: "ORCiD"
+      icon: "fas fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0003-3799-9033"
+    - label: "CV (as a pdf)"
+      icon: "fas fa-fw fa-link"
+      url: "https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-2.pdf"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "email"
+      icon: "fab fa-fw fa-envelope"
+      url: "emolter@berkeley.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/emolter"
+    - label: "ADS"
+      icon: "fab fa-fw fa-globe-asia"
+      url: "https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+    - label: "ORCiD"
+      icon: "fas fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0003-3799-9033"
+    - label: "CV"
+      icon: "fas fa-fw fa-link"
+      url: "https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-2.pdf"
 
 defaults:
   # _posts
