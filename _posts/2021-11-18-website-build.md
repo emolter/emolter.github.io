@@ -1,5 +1,5 @@
 ---
-title: "Post: Standard"
+title: "Making this Website"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorials
@@ -13,13 +13,14 @@ In need of a test blog post for this website, I here document how I made this we
 # Software Prerequisites
 
 GitHub supports building websites using [Jekyll](https://jekyllrb.com/). Jekyll was easy to install with just 
-'''
+{% highlight bash %}
 gem install jekyll bundler
-''' 
+{% endhighlight %}
 once I had installed the appropriate Ruby versions. Ruby was the hard part, as it seems pretty annoying to install without homebrew and the version on my Mac was 2.3 when I needed at least 2.5. I used the rbenv ruby environment handler, and had to install it by hand via [these instructions](https://github.com/rbenv/rbenv#basic-github-checkout). Once that was done, I was able to just run
-'''
+{% highlight bash %}
 rbenv install 2.7.4
-''' 
+{% endhighlight %}
+
 
 <!--more-->
 
@@ -34,8 +35,8 @@ I initially wanted to make use of the categorization and tagging functionality t
 # Font Awesome
 
 I didn't know this existed until there was an example in Minimal Mistakes, but [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free) is really helpful for making little thumbnails. It is important to remember that there are several subclasses, including business (fab) and solid (fas), e.g.
-'''
+{% highlight bash %}
 icon: "fas fa-fw fa-envelope"
 icon: "fab fa-fw fa-orcid"
-'''
+{% endhighlight %}
 It doesn't look like ADS has one, so I just picked a random one.
