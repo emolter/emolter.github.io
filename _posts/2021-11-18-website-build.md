@@ -8,7 +8,7 @@ tags:
   - jekyll
 ---
 
-In need of a test blog post for this website, I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely "username.github.io". It seems like the best decision for someone who might change research positions a few times in the next few years.
+In need of a test blog post for this website, I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely "username.github.io". It seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is [here](https://github.com/emolter/emolter.github.io).
 
 # Software Prerequisites
 
@@ -26,7 +26,7 @@ rbenv install 2.7.4
 
 # Minimal Mistakes
 
-Now I needed a Jekyll template since the default from GitHub Pages seemed a bit basic. [Minimal Mistakes](https://github.com/mmistakes) came through bigtime. I spent a long time trying to use a different free Jekyll template, but the fact that this one had a [quickstart](https://github.com/mmistakes/mm-github-pages-starter/generate) that made the GitHub repo for me was pretty awesome.  And it looks easy to change any layouts or settings by simply adding more files from the main Minimal Mistakes repo into my local repo for the website, but I didn't try that.
+Now I needed a Jekyll template since the default from GitHub Pages seemed a bit basic. [Minimal Mistakes](https://github.com/mmistakes) came through bigtime. I spent a long time trying to use a different free Jekyll template, but its homepage was kind of dumb-looking and I couldn't figure out easily how to change it. The fact that Minimal Mistakes had a [quickstart](https://github.com/mmistakes/mm-github-pages-starter/generate) that made the GitHub repo for me was pretty awesome.  And it looks easy to change any layouts or settings by simply adding more files from the main Minimal Mistakes repo into my local repo for the website, but I didn't try that.
 
 # Layout Decisions
 
@@ -35,7 +35,7 @@ I initially wanted to make use of the categorization and tagging functionality t
 # Font Awesome
 
 I didn't know this existed until there was an example in Minimal Mistakes, but [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free) is really helpful for making little thumbnails. It is important to remember that there are several subclasses, including business (fab) and solid (fas), e.g.
-{% highlight bash %}
+{% highlight html %}
 icon: "fas fa-fw fa-envelope"
 icon: "fab fa-fw fa-orcid"
 {% endhighlight %}
