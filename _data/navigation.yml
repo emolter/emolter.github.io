@@ -3,5 +3,7 @@ main:
     url: /posts/
   - title: "Research"
     url: /research/
+  - title: "Teaching & Service"
+    url: /teaching/
   - title: "Personal"
     url: /about/
