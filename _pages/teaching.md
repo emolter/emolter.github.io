@@ -3,9 +3,9 @@ permalink: /teaching/
 title: "Teaching & Service"
 toc: true
 header:
-  overlay_image: /assets/images/alma-transporters.jpg
+  overlay_image: /assets/images/uranus-rings.png
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo credit: [**ALMA Observatory**](https://www.almaobservatory.org/)"
+  caption: "Uranus's rings from Voyager 2 (forward-scattering)"
 ---
 
 # Climate & Impacts Research Hub
