@@ -5,11 +5,9 @@ hidden: true
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/mm-home-page-feature.jpg
- <!--
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"
- -->
 excerpt: >
   Planetary scientist, climate change researcher, teacher, student, rock climber.<br />
   <small><a href="https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-2.pdf">Download my CV</a></small>
