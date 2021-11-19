@@ -2,8 +2,8 @@
 permalink: /about/
 title: "Personal"
 header:
-  overlay_image: /assets/images/climbing.png
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  image: /assets/images/climbing.png
+  filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Climbing at the Saddle Boulders, Tahoe"
 ---
 

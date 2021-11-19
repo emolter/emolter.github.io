@@ -24,11 +24,9 @@ rbenv install 2.7.4
 
 <!--more-->
 
-# Minimal Mistakes
+# The Minimal Mistakes template
 
-Now I needed a Jekyll template since the default from GitHub Pages seemed a bit basic. [Minimal Mistakes](https://github.com/mmistakes) came through bigtime. I spent a long time trying to use a different free Jekyll template, but its homepage was kind of dumb-looking and I couldn't figure out easily how to change it. The fact that Minimal Mistakes had a [quickstart](https://github.com/mmistakes/mm-github-pages-starter/generate) that made the GitHub repo for me was pretty awesome.  And it looks easy to change any layouts or settings by simply adding more files from the main Minimal Mistakes repo into my local repo for the website, but I didn't try that.
-
-# Layout Decisions
+Now I needed a Jekyll template since the default from GitHub Pages seemed a bit basic. [Minimal Mistakes](https://github.com/mmistakes) came through bigtime. I spent a long time trying to use a different free Jekyll template, but its homepage was kind of dumb-looking and I couldn't figure out easily how to change it. The fact that Minimal Mistakes had a [quickstart](https://github.com/mmistakes/mm-github-pages-starter/generate) that made the GitHub repo for me was pretty awesome. All I did was take that, git clone it to my local machine, and start making changes! Then I just git commit as normal. It takes a few minutes for the site to update after the GitHub repo updates. It looks easy to change any layouts or settings by simply adding more files from the main Minimal Mistakes repo into my local repo for the website, but I didn't try that.
 
 I initially wanted to make use of the categorization and tagging functionality to separate research, teaching, outreach, etc., and just make one post per topic.  But I couldn't easily figure out how to make Research, Teaching, and Outreach site headers.  I'm sure there is a way to do this, but I found it easier to just remove the fancy, auto-sorting Categories and Tags pages and make new pages with the simple layout.  I guess the outcome is good - this isn't really a blog anyway.
 
