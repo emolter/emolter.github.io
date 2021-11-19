@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Edward M. (Ned) Molter"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "Planetary scientist, climate change researcher, teacher, student, rock climber."
+  bio    : "[he/him] Planetary scientist, climate change researcher, teacher, student, rock climber."
   links:
     - label: "email"
       icon: "fas fa-fw fa-envelope"
