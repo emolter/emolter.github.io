@@ -5,7 +5,7 @@ toc: true
 header:
   overlay_image: /assets/images/uranus-rings.png
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Uranus's rings from Voyager 2 (forward-scattering)"
+  caption: "Uranus's rings from **Voyager 2** (forward-scattering)"
 ---
 
 # Climate & Impacts Research Hub

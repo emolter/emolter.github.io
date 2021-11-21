@@ -14,9 +14,27 @@ header:
 
 Observing an atmosphere across the electromagnetic spectrum from the visible to the radio reveals information about clouds, hazes, dust, absorbing gases, and temperature at different pressure levels; radiative transfer modeling provides the translation between an observed spectrum and these physical properties of interest.  The combination of radiative transfer modeling and multi-wavelength observations with cutting-edge (and sometimes amateur!) telescopes led me to (1) discover and characterize a unique storm at Neptune’s equator ([link](https://ui.adsabs.harvard.edu/abs/2019Icar..321..324M/abstract), see also this [Nature Research Highlight](https://www.nature.com/articles/d41586-018-07622-4)), (2) determine isotopic abundances and constrain chemical reaction pathways in Titan ([link](https://ui.adsabs.harvard.edu/abs/2016AJ....152...42M/abstract)), and (3) determine the circulation pattern and gas abundances in Uranus’s middle troposphere ([link](https://ui.adsabs.harvard.edu/abs/2021PSJ.....2....3M/abstract)).
 
+{% capture nepstormimg %}
+![Foo]({{ "/assets/images/neptunestorm.jpeg" | relative_url }})
+{% endcapture %}
+
+<figure>
+  {{ nepstormimg | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>Images of Neptune taken during twilight observing revealed an extremely large bright storm system near Neptune's equator (labeled "cloud complex" in the upper figure), a region where astronomers have never seen a bright cloud. The center of the storm complex is 9,000 km across, about 3/4 the size of Earth, or 1/3 of Neptune's radius. The storm brightened considerably between June 26 and July 2, as noted in the logarithmic scale of the images taken on July 2.</figcaption>
+</figure>
+
 ## The Uranian Ring System
 
-Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings.
+Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution with the goal to resolve each inner main ring individually; stay tuned for results!
+
+{% capture ringsimg %}
+![Foo]({{ "/assets/images/ringsfigure.png" | relative_url }})
+{% endcapture %}
+
+<figure>
+  {{ ringsimg | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>(a) ALMA and (b) VLT SPHERE images of the Uranian ring system. The ALMA synthesized beam is shown as a grey ellipse in the bottom left corner of (a), and a calibration point source image is shown for the VLT observation in (b). The very bright planet Uranus itself is masked; only with careful u-v plane model planet subtraction and self-calibration can the rings be observed. (c) Brightness temperature measurements of the 	&epsilon; ring (blue points) with a fit to a thermal model overlain (red line). Observations on both sides of the blackbody spectrum permitted strong constraints on the emission temperature of the ring particles themselves.</figcaption>
+</figure>
 
 ## JWST Observations of Io
 
