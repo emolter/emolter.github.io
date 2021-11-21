@@ -32,10 +32,15 @@ Our ALMA observations of Uranus's atmosphere serendipitously detected thermal em
 {: .full}
 {% endcapture %}
 
+{% capture ringsimg_caption %}
+(a) ALMA and (b) VLT SPHERE images of the Uranian ring system. The ALMA synthesized beam is shown as a grey ellipse in the bottom left corner of (a), and a calibration point source image is shown for the VLT observation in (b). The very bright planet Uranus itself is masked; only with careful u-v plane model planet subtraction and self-calibration can the rings be observed. (c) Brightness temperature measurements of the 	&epsilon; ring (blue points) with a fit to a thermal model overlain (red line). Observations on both sides of the blackbody spectrum permitted strong constraints on the emission temperature of the ring particles themselves.
+{% endcapture %}
+
 <figure>
   {{ ringsimg | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>(a) ALMA and (b) VLT SPHERE images of the Uranian ring system. The ALMA synthesized beam is shown as a grey ellipse in the bottom left corner of (a), and a calibration point source image is shown for the VLT observation in (b). The very bright planet Uranus itself is masked; only with careful u-v plane model planet subtraction and self-calibration can the rings be observed. (c) Brightness temperature measurements of the 	&epsilon; ring (blue points) with a fit to a thermal model overlain (red line). Observations on both sides of the blackbody spectrum permitted strong constraints on the emission temperature of the ring particles themselves.</figcaption>
+  <figcaption>{{ ringsimg_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
+
 
 ## JWST Observations of Io
 
