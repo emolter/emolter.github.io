@@ -16,7 +16,5 @@ I grew up in Cedarburg, Wisconsin and did my undergrad studies at [Macalester Co
 
 My life-work balance is important to me, and I spend a good portion of the "life" part climbing. During the week you'll find me pulling on plastic in the various gyms in the East Bay Area. On the weekends I'm typically falling off rocks in Tahoe, Bishop, Mickey's Beach, or Auburn Quarry. And for vacation I've slowly been ticking off all the classic climbing destinations in the vast American West: Joe's Valley, Indian Creek, Ten Sleep, Hueco Tanks, Priest Draw, Red Rocks, J Tree, the Homestead, and more to come. Hopefully I'll remember to start blogging some trip photos. I used to be a pretty serious soccer and Ultimate Frisbee player, and I still find time for those occasionally. I'm a big soccer fan; I follow the MLS (MINNESOTA BLACK AND BLUE!) and the Premier League (no real favorite team).
 
-<figure>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/frisbee.jpeg" alt="" style:"width:60%">
-<figcaption>Macalester College frisbee!</figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/frisbee.jpeg" alt="frisbee" width="600">
