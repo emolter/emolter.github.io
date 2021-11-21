@@ -32,7 +32,8 @@ Images of Neptune taken during twilight observing revealed an extremely large br
 Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution with the goal to resolve each inner main ring individually; stay tuned for results!
 
 {% capture ringsimg %}
-![UranusRing]({{ "/assets/images/ringsfigure.png" | relative_url }}){: .full}
+![UranusRing]({{ "/assets/images/ringsfigure.png" | relative_url }})
+{: .full}
 {% endcapture %}
 
 {% capture ringsimg_caption %}
