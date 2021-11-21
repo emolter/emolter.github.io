@@ -10,34 +10,22 @@ header:
 
 # Climate & Impacts Research Hub
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
-
-## research 1.1
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
-
-## research 1.2
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I co-organize Berkeley's [Climate and Impacts Research Hub](https://sites.google.com/berkeley.edu/climatehub/home),  a monthly seminar and discussion group for early-career scientists focused on interdisciplinary research related to climate change impacts, adaptations, and solutions.  We host presentations on diverse topics ranging from "Indigenous Perspectives on Climate-Change-Driven Farm Expansion in the Arctic" to "Satellite Imaging for Identification of Major Methane Leaks."
 
 # Advising
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm currently co-advising a master's student, Andrea Zorzi, and a post-baccalaureate researcher, Erandi Chavez, on different projects related to the time evolution of Neptune's hazes and clouds as seen by Keck and HST infared and visible imaging.  Both students are writing first-author papers on their results - stay tuned!
 
-## advising 1
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
-
-## advising 2
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I am a peer adviser for first- and second-year grad students in the Berkeley Astronomy Department.
 
 # Teaching
 
+I've served as a Graduate Student Instructor for courses at both the intro and senior majors' level, including Astro C10: Introduction to General Astronomy, Astro C12: The Planets, and Astro C162: Planetary Astrophysics.
+
+I have shared my passion for the natural sciences with high school students as a volunteer teacher for [Splash at Berkeley](https://berkeley.learningu.org/) and as a panelist for the Branson school’s semesterly science symposium.
 
 
+# DEI
 
-# URGE
-
-
+As a White man it is my responsibility to take action to make workplaces within academia more welcoming to minoritized individuals. As a member of the Unlearning Racism in the Geosciences ([URGE](https://urgeoscience.org/)) Berkeley chapter, I helped re-design the Berkeley Earth and Planetary Science department's hiring practices and onboarding to be more transparent and equitable. I have also encouraged Indigenous land acknowledgements and intentionally solicited climate-justice speakers for the Climate and Impacts Hub.
 
