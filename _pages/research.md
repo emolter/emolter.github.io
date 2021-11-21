@@ -18,9 +18,13 @@ Observing an atmosphere across the electromagnetic spectrum from the visible to 
 ![NeptuneStorm]({{ "/assets/images/neptunestorm.jpeg" | relative_url }})
 {% endcapture %}
 
+{% capture nepstormimg_caption %}
+Images of Neptune taken during twilight observing revealed an extremely large bright storm system near Neptune's equator (labeled "cloud complex" in the upper figure), a region where astronomers have never seen a bright cloud. The center of the storm complex is 9,000 km across, about 3/4 the size of Earth, or 1/3 of Neptune's radius. The storm brightened considerably between June 26 and July 2, as noted in the logarithmic scale of the images taken on July 2.
+{% endcapture %}
+
 <figure>
   {{ nepstormimg | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Images of Neptune taken during twilight observing revealed an extremely large bright storm system near Neptune's equator (labeled "cloud complex" in the upper figure), a region where astronomers have never seen a bright cloud. The center of the storm complex is 9,000 km across, about 3/4 the size of Earth, or 1/3 of Neptune's radius. The storm brightened considerably between June 26 and July 2, as noted in the logarithmic scale of the images taken on July 2.</figcaption>
+  <figcaption>{{ nepstormimg_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
 ## The Uranian Ring System
