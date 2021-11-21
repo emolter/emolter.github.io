@@ -33,7 +33,6 @@ Our ALMA observations of Uranus's atmosphere serendipitously detected thermal em
 
 {% capture ringsimg %}
 ![UranusRing]({{ "/assets/images/ringsfigure.png" | relative_url }})
-{: .full}
 {% endcapture %}
 
 {% capture ringsimg_caption %}
