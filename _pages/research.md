@@ -12,7 +12,12 @@ header:
 
 ## Planetary Atmospheres
 
-Observing an atmosphere across the electromagnetic spectrum from the visible to the radio reveals information about clouds, hazes, dust, absorbing gases, and temperature at different pressure levels; radiative transfer modeling provides the translation between an observed spectrum and these physical properties of interest.  The combination of radiative transfer modeling and multi-wavelength observations with cutting-edge (and sometimes amateur!) telescopes led me to (1) discover and characterize a unique storm at Neptune’s equator ([link](https://ui.adsabs.harvard.edu/abs/2019Icar..321..324M/abstract), see also this [Nature Research Highlight](https://www.nature.com/articles/d41586-018-07622-4)), (2) determine isotopic abundances and constrain chemical reaction pathways in Titan ([link](https://ui.adsabs.harvard.edu/abs/2016AJ....152...42M/abstract)), and (3) determine the circulation pattern and gas abundances in Uranus’s middle troposphere ([link](https://ui.adsabs.harvard.edu/abs/2021PSJ.....2....3M/abstract)).
+Observing an atmosphere across the electromagnetic spectrum from the visible to the radio reveals information about clouds, hazes, dust, absorbing gases, and temperature at different pressure levels; radiative transfer modeling provides the translation between an observed spectrum and these physical properties of interest.  The combination of radiative transfer modeling and multi-wavelength observations with cutting-edge (and sometimes amateur!) telescopes led me to 
+<ul>
+  <li>discover and characterize a unique storm at Neptune’s equator (<a href="https://ui.adsabs.harvard.edu/abs/2019Icar..321..324M/abstract">link</a>), see also this <a href="https://www.nature.com/articles/d41586-018-07622-4">Nature Research Highlight</a>)</li>
+  <li>determine isotopic abundances and constrain chemical reaction pathways in Titan (<a href="https://ui.adsabs.harvard.edu/abs/2016AJ....152...42M/abstract">link</a>)</li>
+  <li>determine the circulation pattern and gas abundances in Uranus’s middle troposphere (<a href="https://ui.adsabs.harvard.edu/abs/2021PSJ.....2....3M/abstract">link</a>)</li>
+</ul>
 
 {% capture nepstormimg %}
 ![NeptuneStorm]({{ "/assets/images/neptunestorm.jpeg" | relative_url }})
@@ -29,7 +34,7 @@ Images of Neptune taken during twilight observing revealed an extremely large br
 
 ## The Uranian Ring System
 
-Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution with the goal to resolve each inner main ring individually; stay tuned for results!
+Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution. These observations will resolve each inner main ring individually; stay tuned for results!
 
 {% capture ringsimg %}
 ![UranusRing]({{ "/assets/images/ringsfigure.png" | relative_url }})
@@ -47,9 +52,9 @@ Our ALMA observations of Uranus's atmosphere serendipitously detected thermal em
 
 ## JWST Observations of Io
 
+I'm part of an Early Release Science (ERS) project to observe the Jupiter system with the James Webb Space Telescope (JWST; fingers crossed for the launch!). The ERS program will test the capabilities of JWST for bright targets, non-sidereal targets, and targets requiring specific observation timings (e.g., Io in eclipse). 
+
 under construction, please check back later
-
-
 
 ## The Twilight Zone at Keck Observatory
 

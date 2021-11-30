@@ -22,7 +22,7 @@ I am a peer adviser for first- and second-year grad students in the Berkeley Ast
 
 I've served as a Graduate Student Instructor for courses at both the intro and senior majors' level, including Astro C10: Introduction to General Astronomy, Astro C12: The Planets, and Astro C162: Planetary Astrophysics.
 
-I have shared my passion for the natural sciences with high school students as a volunteer teacher for [Splash at Berkeley](https://berkeley.learningu.org/) and as a panelist for the Branson school’s semesterly science symposium.
+I have shared my passion for the natural sciences with high school students as a volunteer teacher for [Splash at Berkeley](https://berkeley.learningu.org/) and as a panelist for the Branson school's semesterly science symposium.
 
 
 # DEI
