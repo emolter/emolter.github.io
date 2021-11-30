@@ -42,7 +42,13 @@ I didn't make any more changes because the defaults look good enough for me, but
 
 # Pushing changes to GitHub
 
-I was initially concerned that including the Dockerfile and new Gemfile.lock would mess up the display if I <code>git push</code> as normal. Testing that now.
+I was initially concerned that all these changes to the GitHub repo would mess up the way the real site at <code>emolter.github.io</code> behaves. Apparently running the naive
+{% highlight html %}
+git add -A
+git commit -m "whatever"
+git push
+{% endhighlight %}
+doesn't break anything, and correctly updates content within existing pages as well as including new blog posts or pages, but does not incorporate the style changes I made.
 
 
 

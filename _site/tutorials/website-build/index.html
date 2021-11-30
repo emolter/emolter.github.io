@@ -1,0 +1,539 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Making this website - Ned Molter</title>
+<meta name="description" content="I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely “username.github.io”. Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is here.  Software prerequisites  GitHub supports building websites using Jekyll. Jekyll was easy to install with just  gem install jekyll bundler  once I had installed the appropriate Ruby versions. Ruby was the hard part, as it seems pretty annoying to install without homebrew and the version on my Mac was outdated (need at least 2.5). I used the rbenv ruby environment handler, and had to install it by hand via these instructions because I don’t use homebrew. Once that was done, I was able to just run  rbenv install 2.7.4">
+
+
+  <meta name="author" content="Edward M. (Ned) Molter">
+  
+  <meta property="article:author" content="Edward M. (Ned) Molter">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ned Molter">
+<meta property="og:title" content="Making this website">
+<meta property="og:url" content="http://0.0.0.0:4000/tutorials/website-build/">
+
+
+  <meta property="og:description" content="I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely “username.github.io”. Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is here.  Software prerequisites  GitHub supports building websites using Jekyll. Jekyll was easy to install with just  gem install jekyll bundler  once I had installed the appropriate Ruby versions. Ruby was the hard part, as it seems pretty annoying to install without homebrew and the version on my Mac was outdated (need at least 2.5). I used the rbenv ruby environment handler, and had to install it by hand via these instructions because I don’t use homebrew. Once that was done, I was able to just run  rbenv install 2.7.4">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-11-18T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/tutorials/website-build/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://0.0.0.0:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ned Molter Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Ned Molter
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/posts/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/teaching/">Teaching & Service</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">Personal</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://0.0.0.0:4000/">
+        <img src="/assets/images/bio-photo.png" alt="Edward M. (Ned) Molter" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://0.0.0.0:4000/" itemprop="url">Edward M. (Ned) Molter</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>[he/him] Planetary scientist, climate change researcher, teacher, student, rock climber.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:emolter@berkeley.edu" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/emolter" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-globe-asia" aria-hidden="true"></i><span class="label">ADS</span></a></li>
+          
+        
+          
+            <li><a href="https://orcid.org/0000-0003-3799-9033" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i><span class="label">ORCiD</span></a></li>
+          
+        
+          
+            <li><a href="https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-2.pdf" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">CV (as a pdf)</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Making this website">
+    <meta itemprop="description" content="I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely “username.github.io”. Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is here.Software prerequisitesGitHub supports building websites using Jekyll. Jekyll was easy to install with justgem install jekyll bundleronce I had installed the appropriate Ruby versions. Ruby was the hard part, as it seems pretty annoying to install without homebrew and the version on my Mac was outdated (need at least 2.5). I used the rbenv ruby environment handler, and had to install it by hand via these instructions because I don’t use homebrew. Once that was done, I was able to just runrbenv install 2.7.4">
+    <meta itemprop="datePublished" content="2021-11-18T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://0.0.0.0:4000/tutorials/website-build/" class="u-url" itemprop="url">Making this website
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely “username.github.io”. Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is <a href="https://github.com/emolter/emolter.github.io">here</a>.</p>
+
+<h1 id="software-prerequisites">Software prerequisites</h1>
+
+<p>GitHub supports building websites using <a href="https://jekyllrb.com/">Jekyll</a>. Jekyll was easy to install with just</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install </span>jekyll bundler</code></pre></figure>
+
+<p>once I had installed the appropriate Ruby versions. Ruby was the hard part, as it seems pretty annoying to install without homebrew and the version on my Mac was outdated (need at least 2.5). I used the rbenv ruby environment handler, and had to install it by hand via <a href="https://github.com/rbenv/rbenv#basic-github-checkout">these instructions</a> because I don’t use homebrew. Once that was done, I was able to just run</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rbenv <span class="nb">install </span>2.7.4</code></pre></figure>
+
+<!--more-->
+
+<h1 id="the-minimal-mistakes-template">The Minimal Mistakes template</h1>
+
+<p>Now I needed a Jekyll template since the default from GitHub Pages seemed a bit simplistic. <a href="https://github.com/mmistakes">Minimal Mistakes</a> came through bigtime. I spent a long time trying to use a different free Jekyll template, but its homepage was kind of dumb-looking and I couldn’t figure out easily how to change it. The fact that Minimal Mistakes had a <a href="https://github.com/mmistakes/mm-github-pages-starter/generate">quickstart</a> that made the GitHub repo for me was pretty awesome. All I did was take that, git clone it to my local machine, and start making changes! Then I just git commit as normal. It takes a few minutes for the site to update after the GitHub repo updates. It looks easy to change any layouts or settings by simply copying relevant layout or style files from the main Minimal Mistakes repo into my local repo (the local repo’s version overrides the defaults), but I didn’t try that yet.</p>
+
+<p>I initially wanted to make use of the categorization and tagging functionality to separate research, teaching, outreach, etc., and just make one post per topic.  But I couldn’t easily figure out how to make Research, Teaching, and Outreach into site headers as well as blog categories.  I’m sure there is a way to do this, but I found it easier to just remove the fancy, auto-sorting Categories and Tags pages and make new pages with the “simple” layout.  I guess the outcome is fine - this isn’t really a blog anyway - but the search function is pretty limited as it seems to only see blog posts.</p>
+
+<p>I wanted to change the homepage to be something other than the blog posts, since this is mainly a professional website. Minimal Mistakes already had that solved, too: they provide a splash page layout [here]{https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/home.md}. To use this, I put it in _pages/home.md, then deleted index.html in the root directory. I really enjoy that the homepage is primarily photos, but one could also make a home.md with the “simple” layout or whatever.</p>
+
+<h1 id="font-awesome">Font Awesome</h1>
+
+<p>I didn’t know this existed until there was an example in Minimal Mistakes, but <a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free">Font Awesome</a> is really helpful for making little thumbnails. You should see where these go in the _config.yml file; the base Minimal Mistakes template is already using them. It is important to remember that there are several subclasses, including business (fab) and solid (fas), e.g.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">icon: "fas fa-fw fa-envelope"
+icon: "fab fa-fw fa-orcid"</code></pre></figure>
+
+<p>It doesn’t look like ADS has a Font Awesome icon, so I just picked a random one.  But these really go a long way toward making things look professional.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#jekyll" class="page__taxonomy-item p-category" rel="tag">jekyll</a><span class="sep">, </span>
+    
+      <a href="/tags/#website" class="page__taxonomy-item p-category" rel="tag">website</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#tutorials" class="page__taxonomy-item p-category" rel="tag">Tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-11-18T00:00:00+00:00">November 18, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Making+this+website%20http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fwebsite-build%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fwebsite-build%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fwebsite-build%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/tutorials/website-build-ii/" class="pagination--pager" title="Making this website part II
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorials/website-build-ii/" rel="permalink">Making this website part II
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is part two of my website build using Jekyll with the Minimal Mistakes template and hosted by Github Pages. In the previous edition I was able to get so...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="mailto:emolter@berkeley.edu" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> email</a></li>
+        
+      
+        
+          <li><a href="https://github.com/emolter" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-globe-asia" aria-hidden="true"></i> ADS</a></li>
+        
+      
+        
+          <li><a href="https://orcid.org/0000-0003-3799-9033" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i> ORCiD</a></li>
+        
+      
+        
+          <li><a href="https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-2.pdf" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> CV</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Ned Molter. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
