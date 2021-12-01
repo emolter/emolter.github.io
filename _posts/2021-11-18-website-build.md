@@ -10,7 +10,7 @@ tags:
 
 I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds me in a few months what I did.  Thanks to Murti for pointing out that I can host a website on github.io this way. In order to have it at username.github.io you just need to name the repo precisely "username.github.io". Making my site here instead of at a berkeley.edu address seems like the best decision for someone who might change research positions a few times in the next few years. The repo that underlies the website is [here](https://github.com/emolter/emolter.github.io).
 
-Update 11/30: I'd highly recommend setting up a Docker environment to host a local copy of the site as it makes everything easier. You can learn how in [Part II of this tutorial]({{ site.url }}/tutorials/website-build-ii). Although it should have been in Part I, I didn't figure out how to do it until just now.
+<b>Update 11/30:</b> I'd highly recommend setting up a Docker environment to host a local copy of the site before you start editing. That way, you can test changes before pushing them to the repo. You can learn how in [Part II of this tutorial]({{ site.url }}/tutorials/website-build-ii). Although it should have been in Part I, I didn't figure out how to do it until just now.
 
 # Software prerequisites
 
