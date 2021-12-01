@@ -34,7 +34,7 @@ Images of Neptune taken during twilight observing revealed an extremely large br
 
 ## The Uranian Ring System
 
-Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings’ thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution. These observations will resolve each inner main ring individually; stay tuned for results!
+Our ALMA observations of Uranus's atmosphere serendipitously detected thermal emission from the Uranian ring system for the first time!  Some collaborators at the University of Leicester subsequently observed the rings' thermal emission in the mid-infrared, so we wrote a paper together ([link](https://ui.adsabs.harvard.edu/abs/2019AJ....158...47M/abstract), [press release](https://news.berkeley.edu/2019/06/20/astronomers-see-warm-glow-of-uranuss-rings/)) in which we determined the temperature and filling factor of the rings. We observed the ring system with ALMA again in October 2021 with a factor of 10 higher resolution. These observations will resolve each inner main ring individually; stay tuned for results!
 
 {% capture ringsimg %}
 ![UranusRing]({{ "/assets/images/ringsfigure.png" | relative_url }})
@@ -52,9 +52,7 @@ Our ALMA observations of Uranus's atmosphere serendipitously detected thermal em
 
 ## JWST Observations of Io
 
-I'm part of an Early Release Science (ERS) project to observe the Jupiter system with the James Webb Space Telescope (JWST; fingers crossed for the launch!). The ERS program will test the capabilities of JWST for bright targets, non-sidereal targets, and targets requiring specific observation timings (e.g., Io in eclipse). 
-
-under construction, please check back later
+I'm part of an Early Release Science (ERS) project to observe the Jupiter system with the James Webb Space Telescope (JWST; fingers crossed for the launch!). The ERS program will test the capabilities of JWST for bright targets, non-sidereal targets, and targets requiring specific observation timings (e.g., Io in eclipse). Within this large project, my subgroup is using Aperture Masking Interferometry (AMI) to resolve Io's volcanically-active hotspots and learn about their temperature structure and morphology. My contributions are to provide expertise in interferometric image reconstruction and to produce realistic flux models of Io's volcanism. Putting these observations together with JWST NIRSpec and MIRI spectroscopic observations provided by other subgroups will simultaneously constrain Io's atmospheric structure and temperature, the temperature and morphology of its hotspots, and the properties of its surface ices.
 
 ## The Twilight Zone at Keck Observatory
 
@@ -65,7 +63,16 @@ I started the Keck Twilight Zone observing campaign ([link to website](https://w
 
 ## Storm Evolution in the U.S. East/Midwest
 
-under construction, please check back later
+Modeling the clouds and rainfall associated with storms over land in the extratropics remains a substantial challenge for state-of-the-art global climate models (GCMs), in part because they cannot resolve deep convection. Recent advances in computing have enabled the first global, non-hydrostatic, convection-resolving simulations, or GCRMs. Although they can so far only simulate a few days at a time, GCRMs have already shown promise in solving at least some of the persistent issues GCMs face (see, e.g., [Caldwell et al. 2021](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002544)). The very high space and time resolution of this new class of models requires new observational data to validate model output, and that's where my work comes in.  I'm putting together a huge new combined dataset of precipitation, cloud properties, and large-scale flow variables at hourly, 8-km resolution over the Eastern and Midwestern United States from 2002 to present. These data will enable us to 
+<ul>
+  <li>evaluate both cloud and precipitation behavior of GCRMs at sub-10 km scales </li>
+  <li>simultaneously probe convective parameterizations and microphysics parameterizations in climate models </li>
+  <li>track storms throughout their evolution; build accurate IDF curves </li>
+  <li>see how the large-scale meteorological flow dictates and is altered by storm behaviors </li>
+  <li>build an observation-based stochastic parameterization scheme </li>
+</ul>
+This is very much a work in progress. The first paper I'm working on using this new dataset is to compare IDF curves between observations and the [DYAMOND summer](https://www.esiwace.eu/services/dyamond-initiative/services-dyamond-summer) GCRM ensemble.
+
 
 ## Observations of Extreme Precipitation
 

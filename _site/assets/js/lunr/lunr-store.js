@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Making this website part II",
-        "excerpt":"This is part two of my website build using Jekyll with the Minimal Mistakes template and hosted by Github Pages. In the previous edition I was able to get something reasonable up and running, but the goals here are to (1) use Docker to make a local copy of the...","categories": ["Tutorials"],
+        "excerpt":"This is part two of my website build using Jekyll with the Minimal Mistakes template and hosted by Github Pages. In the previous edition I was able to get something reasonable up and running using the Minimal Mistakes quickstart. The goals here are to (1) use Docker to make a...","categories": ["Tutorials"],
         "tags": ["website","jekyll"],
         "url": "/tutorials/website-build-ii/",
         "teaser": null
