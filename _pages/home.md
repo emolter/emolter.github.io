@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/splash-image-main.jpg
 excerpt: >
   Planetary scientist, climate change researcher, teacher, student, rock climber.<br />
-  <small><a href="https://astro.berkeley.edu/wp-content/uploads/2016/08/cv-3.pdf">Download my CV</a></small>
+  <small><a href="https://astro.berkeley.edu/wp-content/uploads/2016/08/cv.pdf">Download my CV</a></small>
 feature_row:
   - image_path: /assets/images/keck.png
     alt: "research"
