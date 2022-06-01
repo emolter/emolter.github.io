@@ -1,5 +1,5 @@
 ---
-title: "How to: UCB astro/EPS/physics thesis with Overleaf"
+title: "UC Berkeley astronomy/EPS thesis with Overleaf"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorials
@@ -10,9 +10,9 @@ tags:
 
 This short tutorial documents how I modified an awesome UCB thesis [Overleaf template](https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx) to build my own dissertation.  I am not including my own Overleaf document for you to copy because formatting guidelines from the Grad Div might change over time and I have no interest in maintaining my own template.
 
-The Berkeley Grad Div's page on [Formatting your Thesis](https://grad.berkeley.edu/academic-progress/doctoral/dissertation/#formatting-your-manuscript) warns, "The most common mistake is following a fellow (or previous) student’s example." This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and [Overleaf template](https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx).  So I used that as my starting point.
+The Berkeley Grad Div's page on [Formatting your Thesis](https://grad.berkeley.edu/academic-progress/doctoral/dissertation/#formatting-your-manuscript) warns, <i>"The most common mistake is following a fellow (or previous) student’s example."</i> This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and [Overleaf template](https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx).  So I used that as my starting point.
 
-I needed to import astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, so lots of the commands did not exist in ucbthesis.cls. So I put <code>\usepackage{amsmath}</code> and <code>\usepackage{amssymb}</code>, but there were still many commands (e.g. arcseconds as <code>\arcsec</code> and journal name shortcuts like <code>\grl</code>) missing. For those, I used [latexdefs.tex](https://sites.astro.caltech.edu/observatories/coo/solicit/2022B/latexdefs.tex) (link will download!) from some Caltech Astronomy site (unknown author), and put <code>\include{latexdefs.tex}</code> into the preamble of thesis.tex.
+I needed to import astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, so lots of the commands did not exist in ucbthesis.cls. So I put <code>\usepackage{amsmath}</code> and <code>\usepackage{amssymb}</code>, but there were still many commands (e.g. arcseconds as <code>\arcsec</code> and journal name shortcuts like <code>\grl</code>) missing. For those, I used [latexdefs.tex](https://sites.astro.caltech.edu/observatories/coo/solicit/2022B/latexdefs.tex) (link will download!) from some Caltech Astronomy site (unknown author), and put <code>\include{latexdefs}</code> into the preamble of thesis.tex.
 
 I implemented the following steps to remove/replace formatting from other publications:
 
