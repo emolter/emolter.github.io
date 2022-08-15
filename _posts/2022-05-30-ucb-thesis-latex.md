@@ -12,7 +12,7 @@ This short tutorial documents how I modified an awesome UCB thesis [Overleaf tem
 
 The Berkeley Grad Div's page on [Formatting your Thesis](https://grad.berkeley.edu/academic-progress/doctoral/dissertation/#formatting-your-manuscript) warns, <i>"The most common mistake is following a fellow (or previous) student’s example."</i> This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and [Overleaf template](https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx).  So I used that as my starting point. If you work for the Grad Div and somehow happen to see this, please get in touch! It would be awesome if y'all would maintain a good LaTex template for a science thesis, and I'd be happy to advise.
 
-I needed to import astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added <code>\usepackage{amsmath}</code> and <code>\usepackage{amssymb}</code>, but there were still many commands (e.g. arcseconds as <code>\arcsec</code> and journal name shortcuts like <code>\grl</code>) missing. For those, I used [latexdefs.tex](https://sites.astro.caltech.edu/observatories/coo/solicit/2022B/latexdefs.tex) (link will download!) from some Caltech Astronomy site (unknown author), and put <code>\include{latexdefs}</code> into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used <code> \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} </code>.
+I needed to import astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added <code>\usepackage{amsmath}</code> and <code>\usepackage{amssymb}</code>, but there were still many commands missing, e.g. arcseconds as <code>\arcsec</code> and journal name shortcuts like <code>\grl</code>. For those, I used [latexdefs.tex](https://sites.astro.caltech.edu/observatories/coo/solicit/2022B/latexdefs.tex) (link will download!) from some Caltech Astronomy site (unknown author), and put <code>\include{latexdefs}</code> into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used <code> \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} </code>.
 
 I then implemented the following steps to remove/replace formatting from my other publications and convert them into chapters:
 
@@ -30,10 +30,9 @@ I then implemented the following steps to remove/replace formatting from my othe
   <li> fix tables - no fancytable allowed, but can import other packages. see example tables </li>
     <ul> 
   	  <li> <code>\usepackage{longtable}</code> for multi-page tables </li>
-          <li> <code>\usepackage{adjustwidth}</code> to move tables left to fit better </li>
 	  <li> <code>\usepackage{rotating}</code> for <code>sidewaystable</code> and <code>sidewaysfigure</code> to get tables and figures to fit within margins </li>
 	  <li> <code>\footnotesize</code> and <code>\tiny</code> to get tables to fit within margins. The Grad Div is apparently very serious about margins. But they did not complain that the fontsizes were different in different tables, even though I think this is technically against the formatting guidelines.</li>
-	  <li> \centering within each table and figure call made things look nice </li>
+	  <li> \centering within each table and figure call to make things look nice </li>
     </ul>
   <li> remove calls to <code>\acknowledgements</code>, <code>\appendix</code>, <code>\software</code> </li>
   <li> put acknowledgements into the front matter, with text clarifying which chapter(s) certain acknowledgements (e.g. funding) apply to </li>
@@ -47,9 +46,9 @@ At this stage, the document renders successfully and looks pretty good! But the 
 <ul> 
   <li> At the start of each chapter, I put an italicized note saying, "The published version of this chapter was coauthored by the following people, and is included in the thesis with their express permission: " </li>
   <li> I did actually get email approval from all those people (there is an official way to do this, and the form needs to be submitted like a month before the dissertation deadline. see dissertation filing guidelines) </li>
-  <li> Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header. <\li>
+  <li> Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header. </li>
   <li> I retained sections of each chapter entitled Introduction and Conclusions. I changed the name of the Introduction chapter of the dissertation to be called Background to avoid confusion. </li>
-  <li> I wanted to keep the appendices of the different chapters in the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named "Appendix: whatever." It's an ugly solution and maybe there is a better way, but that's what I went with. I was concerned the Grad Div would make me put them at the end, but they didn't. </li>
+  <li> I wanted to keep the appendices of the different chapters within the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named "Appendix: whatever." It's an ugly solution and maybe there is a better way, but that's what I went with. I was concerned the Grad Div would make me put them at the end, but they didn't. </li>
   <li> I ended up writing a reasonably long introductory chapter, which contained primarily grad-level textbook material that was relevant to my different chapters. And even though this initially felt like busywork, it was actually really instructive to do and I'm glad I did it.</li>
 </ul>
 
