@@ -76,7 +76,7 @@ author:
       url: "https://orcid.org/0000-0003-3799-9033"
     - label: "CV (as a pdf)"
       icon: "fas fa-fw fa-link"
-      url: "https://astro.berkeley.edu/wp-content/uploads/2016/08/cv.pdf"
+      url: "https://github.com/emolter/MolterCV/blob/main/Molter_cv.pdf"
 
 footer:
   links:
@@ -94,7 +94,7 @@ footer:
       url: "https://orcid.org/0000-0003-3799-9033"
     - label: "CV"
       icon: "fas fa-fw fa-link"
-      url: "https://astro.berkeley.edu/wp-content/uploads/2016/08/cv.pdf"
+      url: "https://github.com/emolter/MolterCV/blob/main/Molter_cv.pdf"
 
 defaults:
   # _posts
