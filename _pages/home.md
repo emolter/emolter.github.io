@@ -12,7 +12,7 @@ feature_row:
   - image_path: /assets/images/keck.png
     alt: "research"
     title: "Research"
-    excerpt: "I'm interested in planetary atmospheres, planetary rings, extreme precipitation, climate change, radiative transfer, atmospheric dynamics, and interferometry, to name a few."
+    excerpt: "I'm interested in planetary atmospheres, planetary rings, open-source scientific software, climate change, radiative transfer, atmospheric dynamics, and interferometry, to name a few."
     url: "/research/"
     btn_class: "btn--primary"
     btn_label: "See More"
