@@ -1,0 +1,680 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>UC Berkeley astronomy/EPS thesis with Overleaf - Ned Molter</title>
+<meta name="description" content="This short tutorial documents how I modified an awesome UCB thesis Overleaf template to build my own dissertation.  I am not including my own Overleaf document publicly because formatting guidelines from the Grad Div might change over time, and I have no interest in maintaining my own template. But feel free to get in touch and I’ll send it to you.  The Berkeley Grad Div’s page on Formatting your Thesis warns, “The most common mistake is following a fellow (or previous) student’s example.” This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and Overleaf template.  So I used that as my starting point. If you work for the Grad Div and somehow happen to see this, please get in touch! It would be awesome if y’all would maintain a good LaTex template for a science thesis, and I’d be happy to advise.  I needed to insert astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added \usepackage{amsmath} and \usepackage{amssymb}, but there were still many commands missing, e.g. arcseconds as \arcsec and journal name shortcuts like \grl. For those, I used latexdefs.tex (link will download!) from some Caltech Astronomy site (unknown author), and put \include{latexdefs} into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used  \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} .  I then implemented the following steps to remove/replace formatting from my other publications and convert them into chapters:  	    make a new .tex file for the chapter, and copy everything in there     add the chapter name to the list of \include{} calls in thesis.tex     remove all calls to begin and end document, remove package imports     comment out all authors and affiliations     change \title{} to \chapter{}     remove calls to \abstract{}     copy-paste all references into the references.bib, then delete call to bibliography within chapter      change citations: \citet{} becomes \textcite{}, and \citep becomes \parencite[][]{}     import all figures into the Figures directory     change all the file paths in calls to \includegraphics to point to Figures directory     fix tables - no fancytable allowed, but can import other packages. see example tables          	   \usepackage{longtable} for multi-page tables  	   \usepackage{rotating} for sidewaystable and sidewaysfigure to get tables and figures to fit within margins  	   \footnotesize and \tiny to get tables to fit within margins. The Grad Div is apparently very serious about margins. But they did not complain that the fontsizes were different in different tables, even though I think this is technically against the formatting guidelines. 	   \centering within each table and figure call to make things look nice          remove calls to \acknowledgements, \appendix, \software     put acknowledgements into the front matter, with text clarifying which chapter(s) certain acknowledgements (e.g. funding) apply to     Reformat all software citations previously included with \software{}: find DOIs, make BibTeX entries with doi2bib, include them in bibliography and text using \parencite{}     remove special commands to make appendix numbering like A1, A2, etc.     Check for places in the text where the margin is violated. This often happens with special text formats like \texttt{} because LaTex doesn&#39;t know how to hyphenate it. To fix these, surround the entire paragraph with \begin{sloppypar} and \end{sloppypar}     try compiling and see what fails    At this stage, the document renders successfully and looks pretty good! But the Grad Div gives zero guidelines for how to include published material in the thesis. All they say is “Publishable papers and article-length essays arising from your research project are acceptable only if you incorporate that text into a larger argument that binds together the whole dissertation or thesis. Include introductory, transitional, and concluding sections with the papers or essays.” …the “only” in that sentence a bit ominous. To meet the bare minimum of that requirement, here are the decisions I made to finish formatting stuff. These ended up getting approved without any issues, although I’m sure you could make different decisions that would also be okay:      At the start of each chapter, I put an italicized note saying, &quot;The published version of this chapter was coauthored by the following people, and is included in the thesis with their express permission: &quot;     I did actually get email approval from all those people (there is an official way to do this, and the form needs to be submitted like a month before the dissertation deadline. see dissertation filing guidelines)     Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header.     I retained sections of each chapter entitled Introduction and Conclusions. I changed the name of the Introduction chapter of the dissertation to be called Background to avoid confusion.     I wanted to keep the appendices of the different chapters within the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named &quot;Appendix: whatever.&quot; It&#39;s an ugly solution and maybe there is a better way, but that&#39;s what I went with. I was concerned the Grad Div would make me put them at the end, but they didn&#39;t.     I ended up writing a reasonably long introductory chapter, which contained primarily grad-level textbook material that was relevant to my different chapters. And even though this initially felt like busywork, it was actually really instructive to do and I&#39;m glad I did it.    Update 08/15/22   The dissertation was approved!  I found some problems with the steps I had listed in an earlier version of this blog post, and those have now been changed  to reflect what I actually turned in. I also learned that there’s no reason to stress too much about formatting, because if there are small formatting issues after the deadline you are allowed to change them, as long as your full committee has approved the dissertation before the deadline.">
+
+
+  <meta name="author" content="Edward M. (Ned) Molter">
+  
+  <meta property="article:author" content="Edward M. (Ned) Molter">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ned Molter">
+<meta property="og:title" content="UC Berkeley astronomy/EPS thesis with Overleaf">
+<meta property="og:url" content="http://0.0.0.0:4000/tutorials/ucb-thesis-latex/">
+
+
+  <meta property="og:description" content="This short tutorial documents how I modified an awesome UCB thesis Overleaf template to build my own dissertation.  I am not including my own Overleaf document publicly because formatting guidelines from the Grad Div might change over time, and I have no interest in maintaining my own template. But feel free to get in touch and I’ll send it to you.  The Berkeley Grad Div’s page on Formatting your Thesis warns, “The most common mistake is following a fellow (or previous) student’s example.” This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and Overleaf template.  So I used that as my starting point. If you work for the Grad Div and somehow happen to see this, please get in touch! It would be awesome if y’all would maintain a good LaTex template for a science thesis, and I’d be happy to advise.  I needed to insert astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added \usepackage{amsmath} and \usepackage{amssymb}, but there were still many commands missing, e.g. arcseconds as \arcsec and journal name shortcuts like \grl. For those, I used latexdefs.tex (link will download!) from some Caltech Astronomy site (unknown author), and put \include{latexdefs} into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used  \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} .  I then implemented the following steps to remove/replace formatting from my other publications and convert them into chapters:  	    make a new .tex file for the chapter, and copy everything in there     add the chapter name to the list of \include{} calls in thesis.tex     remove all calls to begin and end document, remove package imports     comment out all authors and affiliations     change \title{} to \chapter{}     remove calls to \abstract{}     copy-paste all references into the references.bib, then delete call to bibliography within chapter      change citations: \citet{} becomes \textcite{}, and \citep becomes \parencite[][]{}     import all figures into the Figures directory     change all the file paths in calls to \includegraphics to point to Figures directory     fix tables - no fancytable allowed, but can import other packages. see example tables          	   \usepackage{longtable} for multi-page tables  	   \usepackage{rotating} for sidewaystable and sidewaysfigure to get tables and figures to fit within margins  	   \footnotesize and \tiny to get tables to fit within margins. The Grad Div is apparently very serious about margins. But they did not complain that the fontsizes were different in different tables, even though I think this is technically against the formatting guidelines. 	   \centering within each table and figure call to make things look nice          remove calls to \acknowledgements, \appendix, \software     put acknowledgements into the front matter, with text clarifying which chapter(s) certain acknowledgements (e.g. funding) apply to     Reformat all software citations previously included with \software{}: find DOIs, make BibTeX entries with doi2bib, include them in bibliography and text using \parencite{}     remove special commands to make appendix numbering like A1, A2, etc.     Check for places in the text where the margin is violated. This often happens with special text formats like \texttt{} because LaTex doesn&#39;t know how to hyphenate it. To fix these, surround the entire paragraph with \begin{sloppypar} and \end{sloppypar}     try compiling and see what fails    At this stage, the document renders successfully and looks pretty good! But the Grad Div gives zero guidelines for how to include published material in the thesis. All they say is “Publishable papers and article-length essays arising from your research project are acceptable only if you incorporate that text into a larger argument that binds together the whole dissertation or thesis. Include introductory, transitional, and concluding sections with the papers or essays.” …the “only” in that sentence a bit ominous. To meet the bare minimum of that requirement, here are the decisions I made to finish formatting stuff. These ended up getting approved without any issues, although I’m sure you could make different decisions that would also be okay:      At the start of each chapter, I put an italicized note saying, &quot;The published version of this chapter was coauthored by the following people, and is included in the thesis with their express permission: &quot;     I did actually get email approval from all those people (there is an official way to do this, and the form needs to be submitted like a month before the dissertation deadline. see dissertation filing guidelines)     Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header.     I retained sections of each chapter entitled Introduction and Conclusions. I changed the name of the Introduction chapter of the dissertation to be called Background to avoid confusion.     I wanted to keep the appendices of the different chapters within the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named &quot;Appendix: whatever.&quot; It&#39;s an ugly solution and maybe there is a better way, but that&#39;s what I went with. I was concerned the Grad Div would make me put them at the end, but they didn&#39;t.     I ended up writing a reasonably long introductory chapter, which contained primarily grad-level textbook material that was relevant to my different chapters. And even though this initially felt like busywork, it was actually really instructive to do and I&#39;m glad I did it.    Update 08/15/22   The dissertation was approved!  I found some problems with the steps I had listed in an earlier version of this blog post, and those have now been changed  to reflect what I actually turned in. I also learned that there’s no reason to stress too much about formatting, because if there are small formatting issues after the deadline you are allowed to change them, as long as your full committee has approved the dissertation before the deadline.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-05-30T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/tutorials/ucb-thesis-latex/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://0.0.0.0:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ned Molter Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Ned Molter
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/posts/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/software/">Software</a>
+            </li><li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/teaching/">Teaching & Service</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">Personal</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://0.0.0.0:4000/">
+        <img src="/assets/images/bio-photo.png" alt="Edward M. (Ned) Molter" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://0.0.0.0:4000/" itemprop="url">Edward M. (Ned) Molter</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>[he/him] Planetary scientist, climate change researcher, teacher, student, rock climber.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:ned.molter@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/emolter" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-globe-asia" aria-hidden="true"></i><span class="label">ADS</span></a></li>
+          
+        
+          
+            <li><a href="https://orcid.org/0000-0003-3799-9033" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i><span class="label">ORCiD</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/emolter/MolterCV/blob/main/Molter_cv.pdf" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">CV (as a pdf)</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="UC Berkeley astronomy/EPS thesis with Overleaf">
+    <meta itemprop="description" content="This short tutorial documents how I modified an awesome UCB thesis Overleaf template to build my own dissertation.  I am not including my own Overleaf document publicly because formatting guidelines from the Grad Div might change over time, and I have no interest in maintaining my own template. But feel free to get in touch and I’ll send it to you.The Berkeley Grad Div’s page on Formatting your Thesis warns, “The most common mistake is following a fellow (or previous) student’s example.” This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and Overleaf template.  So I used that as my starting point. If you work for the Grad Div and somehow happen to see this, please get in touch! It would be awesome if y’all would maintain a good LaTex template for a science thesis, and I’d be happy to advise.I needed to insert astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added \usepackage{amsmath} and \usepackage{amssymb}, but there were still many commands missing, e.g. arcseconds as \arcsec and journal name shortcuts like \grl. For those, I used latexdefs.tex (link will download!) from some Caltech Astronomy site (unknown author), and put \include{latexdefs} into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used  \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} .I then implemented the following steps to remove/replace formatting from my other publications and convert them into chapters:	   make a new .tex file for the chapter, and copy everything in there    add the chapter name to the list of \include{} calls in thesis.tex    remove all calls to begin and end document, remove package imports    comment out all authors and affiliations    change \title{} to \chapter{}    remove calls to \abstract{}    copy-paste all references into the references.bib, then delete call to bibliography within chapter     change citations: \citet{} becomes \textcite{}, and \citep becomes \parencite[][]{}    import all figures into the Figures directory    change all the file paths in calls to \includegraphics to point to Figures directory    fix tables - no fancytable allowed, but can import other packages. see example tables        	   \usepackage{longtable} for multi-page tables 	   \usepackage{rotating} for sidewaystable and sidewaysfigure to get tables and figures to fit within margins 	   \footnotesize and \tiny to get tables to fit within margins. The Grad Div is apparently very serious about margins. But they did not complain that the fontsizes were different in different tables, even though I think this is technically against the formatting guidelines.	   \centering within each table and figure call to make things look nice        remove calls to \acknowledgements, \appendix, \software    put acknowledgements into the front matter, with text clarifying which chapter(s) certain acknowledgements (e.g. funding) apply to    Reformat all software citations previously included with \software{}: find DOIs, make BibTeX entries with doi2bib, include them in bibliography and text using \parencite{}    remove special commands to make appendix numbering like A1, A2, etc.    Check for places in the text where the margin is violated. This often happens with special text formats like \texttt{} because LaTex doesn&#39;t know how to hyphenate it. To fix these, surround the entire paragraph with \begin{sloppypar} and \end{sloppypar}    try compiling and see what fails At this stage, the document renders successfully and looks pretty good! But the Grad Div gives zero guidelines for how to include published material in the thesis. All they say is “Publishable papers and article-length essays arising from your research project are acceptable only if you incorporate that text into a larger argument that binds together the whole dissertation or thesis. Include introductory, transitional, and concluding sections with the papers or essays.” …the “only” in that sentence a bit ominous. To meet the bare minimum of that requirement, here are the decisions I made to finish formatting stuff. These ended up getting approved without any issues, although I’m sure you could make different decisions that would also be okay:    At the start of each chapter, I put an italicized note saying, &quot;The published version of this chapter was coauthored by the following people, and is included in the thesis with their express permission: &quot;    I did actually get email approval from all those people (there is an official way to do this, and the form needs to be submitted like a month before the dissertation deadline. see dissertation filing guidelines)    Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header.    I retained sections of each chapter entitled Introduction and Conclusions. I changed the name of the Introduction chapter of the dissertation to be called Background to avoid confusion.    I wanted to keep the appendices of the different chapters within the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named &quot;Appendix: whatever.&quot; It&#39;s an ugly solution and maybe there is a better way, but that&#39;s what I went with. I was concerned the Grad Div would make me put them at the end, but they didn&#39;t.    I ended up writing a reasonably long introductory chapter, which contained primarily grad-level textbook material that was relevant to my different chapters. And even though this initially felt like busywork, it was actually really instructive to do and I&#39;m glad I did it. Update 08/15/22 The dissertation was approved!  I found some problems with the steps I had listed in an earlier version of this blog post, and those have now been changed  to reflect what I actually turned in. I also learned that there’s no reason to stress too much about formatting, because if there are small formatting issues after the deadline you are allowed to change them, as long as your full committee has approved the dissertation before the deadline.">
+    <meta itemprop="datePublished" content="2022-05-30T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://0.0.0.0:4000/tutorials/ucb-thesis-latex/" class="u-url" itemprop="url">UC Berkeley astronomy/EPS thesis with Overleaf
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>This short tutorial documents how I modified an awesome UCB thesis <a href="https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx">Overleaf template</a> to build my own dissertation.  I am not including my own Overleaf document publicly because formatting guidelines from the Grad Div might change over time, and I have no interest in maintaining my own template. But feel free to get in touch and I’ll send it to you.</p>
+
+<p>The Berkeley Grad Div’s page on <a href="https://grad.berkeley.edu/academic-progress/doctoral/dissertation/#formatting-your-manuscript">Formatting your Thesis</a> warns, <i>“The most common mistake is following a fellow (or previous) student’s example.”</i> This is horrendous advice, and will lead to every student wasting time dealing with nitpicky formatting guidelines.  Thank goodness that LaTex exists, and in particular that Paul Vojta (math professor - never met him) maintains a ucbthesis.cls class file and <a href="https://www.overleaf.com/latex/templates/uc-berkeley-thesis-template/mfzmtxfqvtxx">Overleaf template</a>.  So I used that as my starting point. If you work for the Grad Div and somehow happen to see this, please get in touch! It would be awesome if y’all would maintain a good LaTex template for a science thesis, and I’d be happy to advise.</p>
+
+<p>I needed to insert astronomy and earth science publications that were written in LaTex but used classfiles from AAS, Icarus, and GRL, and lots of the LaTex commands I used in those publications did not exist in ucbthesis.cls. I added <code>\usepackage{amsmath}</code> and <code>\usepackage{amssymb}</code>, but there were still many commands missing, e.g. arcseconds as <code>\arcsec</code> and journal name shortcuts like <code>\grl</code>. For those, I used <a href="https://sites.astro.caltech.edu/observatories/coo/solicit/2022B/latexdefs.tex">latexdefs.tex</a> (link will download!) from some Caltech Astronomy site (unknown author), and put <code>\include{latexdefs}</code> into the preamble of thesis.tex.  I changed the way Biblatex was handling citations, too; I used <code> \usepackage[style=authoryear-comp, backend=biber, uniquename=false, uniquelist=true, maxcitenames=1]{biblatex} </code>.</p>
+
+<p>I then implemented the following steps to remove/replace formatting from my other publications and convert them into chapters:</p>
+
+<ul>	
+  <li> make a new .tex file for the chapter, and copy everything in there </li>
+  <li> add the chapter name to the list of <code>\include{}</code> calls in thesis.tex </li>
+  <li> remove all calls to begin and end document, remove package imports </li>
+  <li> comment out all authors and affiliations </li>
+  <li> change <code>\title{}</code> to <code>\chapter{}</code> </li>
+  <li> remove calls to <code>\abstract{}</code> </li>
+  <li> copy-paste all references into the references.bib, then delete call to bibliography within chapter </li> 
+  <li> change citations: <code>\citet{}</code> becomes <code>\textcite{}</code>, and <code>\citep</code> becomes <code>\parencite[][]{}</code> </li>
+  <li> import all figures into the Figures directory </li>
+  <li> change all the file paths in calls to \includegraphics to point to Figures directory </li>
+  <li> fix tables - no fancytable allowed, but can import other packages. see example tables </li>
+    <ul> 
+  	  <li> <code>\usepackage{longtable}</code> for multi-page tables </li>
+	  <li> <code>\usepackage{rotating}</code> for <code>sidewaystable</code> and <code>sidewaysfigure</code> to get tables and figures to fit within margins </li>
+	  <li> <code>\footnotesize</code> and <code>\tiny</code> to get tables to fit within margins. The Grad Div is apparently very serious about margins. But they did not complain that the fontsizes were different in different tables, even though I think this is technically against the formatting guidelines.</li>
+	  <li> \centering within each table and figure call to make things look nice </li>
+    </ul>
+  <li> remove calls to <code>\acknowledgements</code>, <code>\appendix</code>, <code>\software</code> </li>
+  <li> put acknowledgements into the front matter, with text clarifying which chapter(s) certain acknowledgements (e.g. funding) apply to </li>
+  <li> Reformat all software citations previously included with <code>\software{}</code>: find DOIs, make BibTeX entries with doi2bib, include them in bibliography and text using <code>\parencite{}</code> </li>
+  <li> remove special commands to make appendix numbering like A1, A2, etc. </li>
+  <li> Check for places in the text where the margin is violated. This often happens with special text formats like <code>\texttt{}</code> because LaTex doesn't know how to hyphenate it. To fix these, surround the entire paragraph with <code>\begin{sloppypar}</code> and <code>\end{sloppypar}</code> </li>
+  <li> try compiling and see what fails </li>
+</ul>
+
+<p>At this stage, the document renders successfully and looks pretty good! But the Grad Div gives zero guidelines for how to include published material in the thesis. All they say is <i>“Publishable papers and article-length essays arising from your research project are acceptable only if you incorporate that text into a larger argument that binds together the whole dissertation or thesis. Include introductory, transitional, and concluding sections with the papers or essays.”</i> …the “only” in that sentence a bit ominous. To meet the bare minimum of that requirement, here are the decisions I made to finish formatting stuff. These ended up getting approved without any issues, although I’m sure you could make different decisions that would also be okay:</p>
+<ul> 
+  <li> At the start of each chapter, I put an italicized note saying, "The published version of this chapter was coauthored by the following people, and is included in the thesis with their express permission: " </li>
+  <li> I did actually get email approval from all those people (there is an official way to do this, and the form needs to be submitted like a month before the dissertation deadline. see dissertation filing guidelines) </li>
+  <li> Instead of having a chapter section entitled Abstract, I just put the text of the abstract directly after the italicized list of coauthors without any header. </li>
+  <li> I retained sections of each chapter entitled Introduction and Conclusions. I changed the name of the Introduction chapter of the dissertation to be called Background to avoid confusion. </li>
+  <li> I wanted to keep the appendices of the different chapters within the chapters themselves. To do so, I just changed all the Appendix chapter sections to be regular sections named "Appendix: whatever." It's an ugly solution and maybe there is a better way, but that's what I went with. I was concerned the Grad Div would make me put them at the end, but they didn't. </li>
+  <li> I ended up writing a reasonably long introductory chapter, which contained primarily grad-level textbook material that was relevant to my different chapters. And even though this initially felt like busywork, it was actually really instructive to do and I'm glad I did it.</li>
+</ul>
+
+<p><b> Update 08/15/22 </b></p>
+
+<p>The dissertation was approved!  I found some problems with the steps I had listed in an earlier version of this blog post, and those have now been changed  to reflect what I actually turned in. I also learned that there’s no reason to stress <i>too</i> much about formatting, because if there are small formatting issues after the deadline you are allowed to change them, as long as your full committee has approved the dissertation before the deadline.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#berkeley" class="page__taxonomy-item p-category" rel="tag">Berkeley</a><span class="sep">, </span>
+    
+      <a href="/tags/#software" class="page__taxonomy-item p-category" rel="tag">software</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#tutorials" class="page__taxonomy-item p-category" rel="tag">Tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-05-30T00:00:00+00:00">May 30, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=UC+Berkeley+astronomy%2FEPS+thesis+with+Overleaf%20http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fucb-thesis-latex%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fucb-thesis-latex%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F0.0.0.0%3A4000%2Ftutorials%2Fucb-thesis-latex%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/website-build-ii/" class="pagination--pager" title="Making this website part II
+">Previous</a>
+    
+    
+      <a href="/professional%20development/personal/dotAstronomy12/" class="pagination--pager" title=".Astronomy 12 Debrief
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorials/readthedocs-customization/" rel="permalink">Custom color scheme, design, and logo of readthedocs page
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This very short tutorial documents how I gave the pylanetary project’s readthedocs page a custom logo and layout. The logo was designed by Jacob Waliszewski ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/professional%20development/personal/dotAstronomy12/" rel="permalink">.Astronomy 12 Debrief
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">de-briefer de-better, har, har.
+
+I Contributed!
+
+In contrast to the Astronomical Software Development conference last year, which was my first unconference, ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorials/website-build-ii/" rel="permalink">Making this website part II
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is part two of my website build using Jekyll with the Minimal Mistakes template and hosted by Github Pages. In the previous edition I was able to get so...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tutorials/website-build/" rel="permalink">Making this website
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I here document how I made this website and what I learned. I hope this post helps someone else make their github.io site for the first time, or just reminds...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="mailto:ned.molter@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> email</a></li>
+        
+      
+        
+          <li><a href="https://github.com/emolter" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20astronomy&q=author%3A(%22molter%2C%20e.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-globe-asia" aria-hidden="true"></i> ADS</a></li>
+        
+      
+        
+          <li><a href="https://orcid.org/0000-0003-3799-9033" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-orcid" aria-hidden="true"></i> ORCiD</a></li>
+        
+      
+        
+          <li><a href="https://github.com/emolter/MolterCV/blob/main/Molter_cv.pdf" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> CV</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Ned Molter. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -16,7 +16,7 @@
 title: Ned Molter
 email: emolter@berkeley.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Edward M. Molter, Ned Molter, personal website, not sure where this goes
+  Edward M. Molter, Ned Molter, personal website
 twitter_username: 
 github_username: emolter
 minimal_mistakes_skin: contrast
@@ -64,7 +64,7 @@ author:
   links:
     - label: "email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:emolter@berkeley.edu"
+      url: "mailto:ned.molter@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emolter"
@@ -82,7 +82,7 @@ footer:
   links:
     - label: "email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:emolter@berkeley.edu"
+      url: "mailto:ned.molter@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emolter"

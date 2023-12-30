@@ -1,6 +1,8 @@
 main:
   - title: "Blog"
     url: /posts/
+  - title: "Software"
+    url: /software/
   - title: "Research"
     url: /research/
   - title: "Teaching & Service"

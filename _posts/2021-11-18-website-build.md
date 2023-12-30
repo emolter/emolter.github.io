@@ -32,7 +32,7 @@ Now I needed a Jekyll template since the default from GitHub Pages seemed a bit 
 
 I initially wanted to make use of the categorization and tagging functionality to separate research, teaching, outreach, etc., and just make one post per topic.  But I couldn't easily figure out how to make Research, Teaching, and Outreach into site headers as well as blog categories.  I'm sure there is a way to do this, but I found it easier to just remove the fancy, auto-sorting Categories and Tags pages and make new pages with the "simple" layout.  I guess the outcome is fine - this isn't really a blog anyway - but the search function is pretty limited as it seems to only see blog posts.
 
-I wanted to change the homepage to be something other than the blog posts, since this is mainly a professional website. Minimal Mistakes already had that solved, too: they provide a splash page layout [here]{https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/home.md}. To use this, I put it in _pages/home.md, then deleted index.html in the root directory. I really enjoy that the homepage is primarily photos, but one could also make a home.md with the "simple" layout or whatever.
+I wanted to change the homepage to be something other than the blog posts, since this is mainly a professional website. Minimal Mistakes already had that solved, too: they provide a splash page layout [here](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/home.md). To use this, I put it in _pages/home.md, then deleted index.html in the root directory. I really enjoy that the homepage is primarily photos, but one could also make a home.md with the "simple" layout or whatever.
 
 # Font Awesome
 

@@ -6,7 +6,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/splash-image-main.jpg
 excerpt: >
-  Planetary scientist, climate change researcher, teacher, student, rock climber.<br />
+  Software engineer, planetary scientist, teacher, student, rock climber.<br />
   <small><a href="https://github.com/emolter/MolterCV/blob/main/Molter_cv.pdf">See my CV</a></small>
 feature_row:
   - image_path: /assets/images/keck.png
@@ -16,11 +16,11 @@ feature_row:
     url: "/research/"
     btn_class: "btn--primary"
     btn_label: "See More"
-  - image_path: /assets/images/campbell.png
-    alt: "teaching"
-    title: "Teaching & Service"
-    excerpt: "I run a grad-student-focused interdisciplinary climate change seminar, teach planetary science, and help to dismantle oppressive systems."
-    url: "/teaching/"
+  - image_path: /assets/images/rho-ophiuchi.png
+    alt: "software"
+    title: "Open-Source Software"
+    excerpt: "I am a science software engineer for Space Telescope Science Institute and a regular contributor of open-source astronomy software."
+    url: "/software/"
     btn_class: "btn--primary"
     btn_label: "See More"
   - image_path: /assets/images/tent.png
